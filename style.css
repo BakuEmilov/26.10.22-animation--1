@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,500;1,700&family=Sono&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+body, html{
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  margin-top: 50px;
+}
+
+/* simple-spiner */
+.simple-spiner{
+  width: 150px;
+  height: 150px;
+  border: 10px solid rgba(150, 150, 150, 0.2);
+  border-radius: 50%;
+  border-top-color:rgba(150, 150, 150);
+  animation: rotate 2s 0s infinite ease-in-out;
+  margin: 0 auto;
+  margin-bottom: 200px;
+}
+@keyframes rotate{
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+
+/* clock */
+.clock{
+  position: relative;
+  height: 200px;
+  width: 200px;
+  background-color: white;
+  border-radius: 100%;
+  border: 10px solid rgb(1, 38, 1);
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  margin-bottom: 150px;
+
+}
+
+.clock .top{
+  position: absolute;
+  width: 3px;
+  height: 8px;
+  background-color: black;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.clock .right{
+  position: absolute;
+  width: 8px;
+  height: 3px;
+  background-color: black;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  margin:  auto;
+  
+}
+
+.clock .bottom{
+  position: absolute;
+  width: 3px;
+  height: 8px;
+  background-color: black;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.clock .left{
+  position: absolute;
+  width: 8px;
+  height: 3px;
+  background-color: black;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  margin:  auto;
+  
+}
+
+.clock .center{
+  height: 6px;
+  width: 6px;
+  background-color: black;
+  border-radius: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+
+}
+
+.clock .shadow{
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  left: 60px;
+  top: 60px;
+  transform: rotate(135deg);
+}
+
+.clock .hour{
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  animation: time 60s infinite linear;
+}
+
+.clock .hour:before{
+  content: " ";
+  height: 60px;
+  width: 3px;
+  background-color: black;
+  position: absolute;
+  top: 30px;
+
+}
+
+.clock .minute{
+  width: 1px;
+  height: 100px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  animation: time 30s infinite linear;
+}
+
+.clock .minute:before{
+  position: absolute;
+  content: " ";
+  background-color: black;
+  height: 40px;
+  width: 1px;
+  top: 50px;
+ 
+}
+
+.clock .second{
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  animation: time 15s infinite linear;
+}
+
+  .clock .second:before{
+    position: absolute;
+    content: " ";
+    background-color: red;
+    height: 45px;
+    width: 2px;
+    top: 45px;
+  }
+
+  @keyframes time{
+    to{
+      transform: rotate(360deg);
+    }
+  }
+
+ 
